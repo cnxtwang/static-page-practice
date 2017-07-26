@@ -1,5 +1,7 @@
 $moss-green: #AEDAA6;
 $bg-color: $moss-green;
+$primary-text: #515151;
+$secondary-text: #969696;
 
 *{
   box-sizing: border-box;
@@ -33,15 +35,15 @@ header {
     text-transform: uppercase;
     font-size: .68em;
     padding-left: 3.4em;
-    color: #969696;
+    color: $secondary-text;
     position: relative;
 
     &::before {
       content: " ";
       height: .5em;
       width: .5em;
-      border-top: .1em solid #969696;
-      border-left: .1em solid #969696;
+      border-top: .1em solid $secondary-text;
+      border-left: .1em solid $secondary-text;
       position: absolute;
       left: 2em;
       top: 50%;
@@ -57,5 +59,57 @@ header {
     right: .9em;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+main {
+  display: block;
+  .img-box {
+    border-right: .05em solid #F0F0F0;
+    display: inline-block;
+    width: 17.2em;
+    height: 20.4em;
+    overflow: hidden;
+  }
+
+  img {
+    width: 16em;
+    margin: 0 auto;
+    display: block;
+  }
+
+  aside {
+    display: inline-block;
+    width: 23em;
+    vertical-align: top;
+    padding: 2.7em 1.8em 0;
+
+    h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 1.21em;
+      margin: 0;
+      color: $primary-text;
+    }
+
+    .title-info {
+      text-transform: uppercase;
+      font-size: 0.68em;
+      margin-top: .5em;
+      color: $secondary-text;
+    }
+
+    .price {
+      font-size: 1.45em;
+      margin-top: .8em;
+      color: $primary-text;
+    }
+
+    .desc {
+      color: $secondary-text;
+      font-size: .77em;
+      line-height: 1.75em;
+      margin-top: 1.35em;
+    }
   }
 }
