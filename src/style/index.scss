@@ -1,0 +1,61 @@
+$moss-green: #AEDAA6;
+$bg-color: $moss-green;
+
+*{
+  box-sizing: border-box;
+}
+
+html, body, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg-color;
+  font-family: "Frutiger Neue W02 Book",Arial,Helvetica,sans-serif;
+}
+
+.container {
+  width: 40.6em;
+  background: white;
+  margin: 6.3em auto 0;
+  border-radius: .1em;
+  position: relative;
+}
+
+header {
+  position: relative;
+
+  .back {
+    height: 4.5em;
+    line-height: 4.5em;
+    border-bottom: .05em solid #F0F0F0;
+    text-transform: uppercase;
+    font-size: .68em;
+    padding-left: 3.4em;
+    color: #969696;
+    position: relative;
+
+    &::before {
+      content: " ";
+      height: .5em;
+      width: .5em;
+      border-top: .1em solid #969696;
+      border-left: .1em solid #969696;
+      position: absolute;
+      left: 2em;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  img {
+    display: inline-block;
+    height: 1.1em;
+    width: 1.1em;
+    position: absolute;
+    right: .9em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
