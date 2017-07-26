@@ -2,6 +2,7 @@ $moss-green: #AEDAA6;
 $bg-color: $moss-green;
 $primary-text: #515151;
 $secondary-text: #969696;
+$border-color: #F0F0F0;
 
 *{
   box-sizing: border-box;
@@ -18,6 +19,7 @@ body {
 }
 
 .container {
+  box-shadow: 0 0  1em $secondary-text;
   width: 40.6em;
   background: white;
   margin: 6.3em auto 0;
@@ -31,7 +33,7 @@ header {
   .back {
     height: 4.5em;
     line-height: 4.5em;
-    border-bottom: .05em solid #F0F0F0;
+    border-bottom: .05em solid $border-color;
     text-transform: uppercase;
     font-size: .68em;
     padding-left: 3.4em;
@@ -65,10 +67,10 @@ header {
 main {
   display: block;
   .img-box {
-    border-right: .05em solid #F0F0F0;
+    border-right: .05em solid $border-color;
     display: inline-block;
     width: 17.2em;
-    height: 20.4em;
+    height: 20.15em;
     overflow: hidden;
   }
 
@@ -110,6 +112,27 @@ main {
       font-size: .77em;
       line-height: 1.75em;
       margin-top: 1.35em;
+    }
+  }
+
+  .operation {
+    padding-top: .5em;
+    button {
+      width: 11.4em;
+      border: 0.01em solid #F0F0F0;
+      background: white;
+      text-transform: uppercase;
+      height: 2.9em;
+      color: $secondary-text;
+      cursor: pointer;
+
+      &:hover{
+        background: $border-color;
+      }
+
+      &:first-child {
+        margin-right: .2em;
+      }
     }
   }
 }
